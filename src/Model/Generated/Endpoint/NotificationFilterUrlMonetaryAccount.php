@@ -67,7 +67,7 @@ class NotificationFilterUrlMonetaryAccount extends BunqModel
         int $monetaryAccountId = null,
         array $notificationFilters = null,
         array $customHeaders = []
-    ): BunqResponseInt {
+    ): void {
         $apiClient = new ApiClient(static::getApiContext());
         $responseRaw = $apiClient->post(
             vsprintf(
@@ -78,9 +78,9 @@ class NotificationFilterUrlMonetaryAccount extends BunqModel
             $customHeaders
         );
 
-        return BunqResponseInt::castFromBunqResponse(
-            static::processForId($responseRaw)
-        );
+        // return BunqResponseInt::castFromBunqResponse(
+        //     static::processForId($responseRaw)
+        // );
     }
 
     /**
