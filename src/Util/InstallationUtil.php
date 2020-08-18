@@ -210,7 +210,7 @@ final class InstallationUtil
      */
     private static function assertIpIsValid(string $ip)
     {
-        if (preg_match(self::REGEX_IP, $ip) === self::PREG_MATCH_SUCCESS) {
+        if (preg_match(self::REGEX_IP, $ip) === self::PREG_MATCH_SUCCESS || $ip == '*') {
             // Ip address is valid
         } else {
             throw new BunqException(self::ERROR_INVALID_IP_ADDRESS, [$ip]);
