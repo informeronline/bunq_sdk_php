@@ -1,5 +1,5 @@
 {
-    "name": "bunq/sdk_php",
+    "name": "informeronline/bunq_sdk_php",
     "description": "bunq PHP SDK",
     "keywords": [
         "open-banking",
